@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../STYLE/COFStyle.css" rel="styleSheet">
+    <title>COF Turn-Order</title>
+</head>
+<body>
+    <h1>Chroniques Oubliées Fantasy <br>TURN-ORDER</h1>
+    <main>
+        <div id="charactersTurnBox">
+            <h2>Turn-Order<button class ="add" id="addCharacterTurnBtn" onClick="addCharacterTO()">+</button></h2>
+            <div id="turnNumber">Turn : 
+            </div>
+            <div id="charactersTurn" >
+                <div  id="charactersNameTO">
+                    <input class="charactersNameTOInput" name="charactersNameTOInput" id="charactersNameTOInput" type="text" placeholder="Nom">
+                        <ul id="charactersNameTOList">
+                            <li></li>
+                        </ul>
+                </div>    
+                <div id="charactersInitTO">
+                <input id="charactersInitTOInput" type="number" placeholder="Initiative">   
+                    <ul id="charactersInitTOList">
+                        <li></li>
+                    </ul>     
+                </div>
+            </div>
+
+            <div id="turnOrderBtn">
+                <button id="previous"> <img src="../IMG/LArrow.png" alt="Précédent"></button>
+                <button id="follower"><img src="../IMG/RArrow.png" alt="suivant"></button>
+            </div>    
+        </div>
+        <div id="charactersStatusBox">
+            <h2>Status<button class ="add" id="addCharacterStatus">+</button>  </h2>
+            <ul>
+                <li class="charactersStatusName"><input type="text">  
+                    <ul id="charactersStatus">
+                        <li><select id="statusType">
+                                <option value="blind">Aveuglé</option>       
+                                <option value="stun">Etourdi</option>
+                                <option value="Immobilized">Immobilisé</option>
+                                <option value="paralyzed">Paralysé</option>
+                                <option value="slowed">Ralenti</option>
+                                <option value="overturned">Renversé</option>
+                                <option value="suprised">Surpris</option>
+                            </select>
+                        </li>
+                        <input id ="statusDuration" type="number" placeholder="durée">
+                        <button class ="add" id="addStatus">+</button>
+                    </ul>      
+                </li>
+            </ul>
+        </div>
+    </main>
+    <footer> 
+        <a href="./menu.html" alt="retour au menu">RETOUR AU MENU</a>
+    </footer>
+</body>
+    <script src ="../script.js"></script>
+</html>
