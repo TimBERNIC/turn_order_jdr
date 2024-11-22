@@ -90,6 +90,41 @@ justify-content: space-between;}
 display: flex;
 
 }
+
+#charactersDeleteTOInput{
+    opacity: 0;
+}
+.delete-btn {
+    background-color: rgb(143, 38, 80);
+    border-radius: 5px;
+    color: whitesmoke;
+    
+}
+#charactersStatusName{
+    width: 25%;
+ 
+}
+#charactersStatusBoxList{
+    display: flex;
+    flex-direction: row;
+    justify-content:left;
+}
+#charactersStatusList{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+#statusDuration {
+    width: 60px;
+   
+}
+
+.statusList{
+    display: flex;
+    justify-content: space-around;
+    background-color: aqua;
+}
 #charactersStatusBox {
     
     color: whitesmoke;
@@ -105,14 +140,9 @@ display: flex;
     flex-direction: column;
     gap: 10px;
 }
-.charactersStatusName {
-    display: flex;
-    flex-direction: row;
-}
-#charactersStatus {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+#charactersStatusDescriptionList{
+    
+    background-color: whitesmoke;
 }
 
 a {
