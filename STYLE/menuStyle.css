@@ -23,12 +23,14 @@ h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 10px;
     margin: 3%;
 }
 
 li { 
     list-style-type: none;
+    position: static;
+   
 }
 .game {border: 1px solid transparent;
         border-radius: 30px;
@@ -50,22 +52,56 @@ a {
 
 }
 
-a:hover {
+#cofTitle:hover {
     color: brown;
 }
 #COF {
     background-image: url("../IMG/COF.jpg");
     background-position: 50% 70%;
+    transition: 0.5s;
+    z-index: 0;
+}
+#COF:hover{
+    height: 30vh;
+    width: 35vw;
+    border: solid 3px brown;
+    z-index: 10;
 }
 
+#dndTitle:hover {
+    color: turquoise;
+}
 #DnD {
     background-image: url("../IMG/DnD.webp");
     background-position: 50% 25%;
     background-size: 100%;
+    transition: 0.5s;
+    z-index: 0;
+    
+    
 }
 
+#DnD:hover{
+    height: 30vh;
+    width: 35vw;
+    border: solid 3px turquoise;
+    z-index: 10;
+}
+
+#blobTitle:hover {
+    color: rgb(111, 241, 183);
+}
 #Blob {
     background-image: url("../IMG/Blob.jpg");
     background-position: center;
     background-size: 100%;
+    transition: 0.5s;
+    z-index: 0;
+}
+
+#Blob:hover{
+    height: 30vh;
+    width: 35vw;
+    border: solid 3px rgb(111, 241, 183);
+    z-index: 10;
 }

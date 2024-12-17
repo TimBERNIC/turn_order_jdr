@@ -10,36 +10,52 @@
     <h1>Chroniques Oubliées Fantasy <br>TURN-ORDER</h1>
     <main>
         <div id="charactersTurnBox">
-            <h2>Turn-Order<button class ="add" id="addCharacterTurnBtn" onClick="addCharacterTO()">+</button></h2>
+            <h2>Turn-Order<button class ="add" id="addCharacterTurnBtn" onclick="addCharacterTO()">+</button></h2>
             <div id="turnNumber">Turn : 
             </div>
-            <div id="charactersTurn" >
+            <div id="charactersTurn">
+                <div id="characterTurnTracker">
+                    <ul id = "turnTrackerTOList">
+                        <li id="first"></li>
+                    </ul>
+                </div>
                 <div  id="charactersNameTO">
                     <input class="charactersNameTOInput" name="charactersNameTOInput" id="charactersNameTOInput" type="text" placeholder="Nom">
-                        <ul id="charactersNameTOList">
-                            <li></li>
-                        </ul>
+                    <ul id="charactersNameTOList" >
+                        <li class="TOList"></li>
+                    </ul>
                 </div>    
                 <div id="charactersInitTO">
-                <input id="charactersInitTOInput" type="number" placeholder="Initiative">   
-                    <ul id="charactersInitTOList">
-                        <li></li>
+                    <input id="charactersInitTOInput" type="number" placeholder="Initiative">   
+                    <ul id="charactersInitTOList" >
+                        <li class="TOList"></li>
+                    </ul>     
+                </div>
+                <div id="charactersDelete">
+                    <div id="charactersDeleteTOInput">123</div>   
+                    <ul id="charactersDeleteTOList" >
+                        <li class="TOList"></li>
                     </ul>     
                 </div>
             </div>
-
             <div id="turnOrderBtn">
                 <button id="previous"> <img src="../IMG/LArrow.png" alt="Précédent"></button>
                 <button id="follower"><img src="../IMG/RArrow.png" alt="suivant"></button>
             </div>    
         </div>
-        <div id="charactersStatusBox">
-            <h2>Status<button class ="add" id="addCharacterStatus">+</button>  </h2>
-            <ul>
-                <li class="charactersStatusName"><input type="text">  
-                    <ul id="charactersStatus">
-                        <li><select id="statusType">
-                                <option value="blind">Aveuglé</option>       
+        <section id="charactersStatusBox">
+            <h2>Status</h2>
+            <div id="charactersStatusBoxList">
+                <div id="charactersStatusName">
+                    <ul id="charactersStatusNameList">
+                    </ul>
+                </div>
+                <div id="charactersStatus">
+                    <template id="statusTemplate">
+                        <li id="statusList" >   
+                            <select class="statusType" id="statusType">
+                                <option></option>
+                                <option value="blind">Aveuglé</option>
                                 <option value="stun">Etourdi</option>
                                 <option value="Immobilized">Immobilisé</option>
                                 <option value="paralyzed">Paralysé</option>
@@ -47,17 +63,26 @@
                                 <option value="overturned">Renversé</option>
                                 <option value="suprised">Surpris</option>
                             </select>
+                            <input id="statusDuration" type="number" placeholder="durée">
+                            <div id="charactersStatusDescription">
+                                <ul id ="charactersStatusDescriptionList">
+                                    <li></li>
+                                </ul>
+                              </div>
+                              <button onclick="addProperty()">+</button>  
                         </li>
-                        <input id ="statusDuration" type="number" placeholder="durée">
-                        <button class ="add" id="addStatus">+</button>
-                    </ul>      
-                </li>
-            </ul>
-        </div>
+                    </template>
+                    <ul id="charactersStatusList">
+                        <li></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
     </main>
     <footer> 
         <a href="./menu.html" alt="retour au menu">RETOUR AU MENU</a>
     </footer>
+    <script src ="../SCRIPT/scriptCof.js"></script>
 </body>
-    <script src ="../script.js"></script>
+    
 </html>

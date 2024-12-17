@@ -75,6 +75,9 @@ justify-content: space-between;}
     
 }
 
+#tokenTracker {
+    height: 3vh ;
+}
 #turnOrderBtn button{
     box-shadow: 0 5 5px black;
     background-color: grey ;
@@ -89,6 +92,35 @@ justify-content: space-between;}
 #charactersTOList {
 display: flex;
 
+}
+
+#charactersDeleteTOInput{
+    opacity: 0;
+}
+.delete-btn {
+    background-color: rgb(143, 38, 80);
+    border-radius: 5px;
+    color: whitesmoke;
+    
+}
+#charactersStatusName{
+    width: 25%;
+ 
+}
+#charactersStatusBoxList{
+    display: flex;
+    flex-direction: row;
+    justify-content:left;
+}
+
+#statusDuration {
+    width: 60px;
+   
+}
+
+#statusList {
+    display: flex;
+    flex-direction: row;
 }
 #charactersStatusBox {
     
@@ -105,14 +137,9 @@ display: flex;
     flex-direction: column;
     gap: 10px;
 }
-.charactersStatusName {
-    display: flex;
-    flex-direction: row;
-}
-#charactersStatus {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+#charactersStatusDescriptionList{
+    
+    background-color: whitesmoke;
 }
 
 a {
