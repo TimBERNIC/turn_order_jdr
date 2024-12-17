@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../STYLE/COFStyle.css" rel="styleSheet">
-    <script src ="../script.js"></script>
     <title>COF Turn-Order</title>
 </head>
 <body>
@@ -14,7 +13,12 @@
             <h2>Turn-Order<button class ="add" id="addCharacterTurnBtn" onclick="addCharacterTO()">+</button></h2>
             <div id="turnNumber">Turn : 
             </div>
-            <div id="charactersTurn" >
+            <div id="charactersTurn">
+                <div id="characterTurnTracker">
+                    <ul id = "turnTrackerTOList">
+                        <li id="first"></li>
+                    </ul>
+                </div>
                 <div  id="charactersNameTO">
                     <input class="charactersNameTOInput" name="charactersNameTOInput" id="charactersNameTOInput" type="text" placeholder="Nom">
                     <ul id="charactersNameTOList" >
@@ -23,15 +27,15 @@
                 </div>    
                 <div id="charactersInitTO">
                     <input id="charactersInitTOInput" type="number" placeholder="Initiative">   
-                        <ul id="charactersInitTOList" >
-                            <li class="TOList"></li>
-                        </ul>     
+                    <ul id="charactersInitTOList" >
+                        <li class="TOList"></li>
+                    </ul>     
                 </div>
                 <div id="charactersDelete">
                     <div id="charactersDeleteTOInput">123</div>   
-                        <ul id="charactersDeleteTOList" >
-                            <li class="TOList"></li>
-                        </ul>     
+                    <ul id="charactersDeleteTOList" >
+                        <li class="TOList"></li>
+                    </ul>     
                 </div>
             </div>
             <div id="turnOrderBtn">
@@ -41,24 +45,44 @@
         </div>
         <section id="charactersStatusBox">
             <h2>Status</h2>
-                <div id="charactersStatusBoxList">
-                    <div id="charactersStatusName">
-                        <ul id="charactersStatusNameList">
-                            <li></li>
-                        </ul>
-                    </div>
-                    <div id="charactersStatus">
-                        <ul id="charactersStatusList">
-                            <li class="statusList" id="statusTemplate">
-                            </li>
-                        </ul>
-                    </div>
+            <div id="charactersStatusBoxList">
+                <div id="charactersStatusName">
+                    <ul id="charactersStatusNameList">
+                    </ul>
                 </div>
+                <div id="charactersStatus">
+                    <template id="statusTemplate">
+                        <li id="statusList" >   
+                            <select class="statusType" id="statusType">
+                                <option></option>
+                                <option value="blind">Aveuglé</option>
+                                <option value="stun">Etourdi</option>
+                                <option value="Immobilized">Immobilisé</option>
+                                <option value="paralyzed">Paralysé</option>
+                                <option value="slowed">Ralenti</option>
+                                <option value="overturned">Renversé</option>
+                                <option value="suprised">Surpris</option>
+                            </select>
+                            <input id="statusDuration" type="number" placeholder="durée">
+                            <div id="charactersStatusDescription">
+                                <ul id ="charactersStatusDescriptionList">
+                                    <li></li>
+                                </ul>
+                              </div>
+                              <button onclick="addProperty()">+</button>  
+                        </li>
+                    </template>
+                    <ul id="charactersStatusList">
+                        <li></li>
+                    </ul>
+                </div>
+            </div>
         </section>
     </main>
     <footer> 
         <a href="./menu.html" alt="retour au menu">RETOUR AU MENU</a>
     </footer>
+    <script src ="../SCRIPT/scriptCof.js"></script>
 </body>
     
 </html>
